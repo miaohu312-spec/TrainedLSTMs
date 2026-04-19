@@ -26,8 +26,8 @@ The trained LSTM models in this repository are developed for response spectrum c
 
 The models use the following normalized input parameters:
 
-- normalized `Vs30`
-- normalized damping ratio
+- `Vs30`
+- damping ratio
 - spectral shape factor
 
 ## Output Order
