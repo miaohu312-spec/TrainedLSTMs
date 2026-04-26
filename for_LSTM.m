@@ -7,9 +7,9 @@ clear; clc;
 % Step 1: Input raw parameters
 % ---------------------------------
 % Please input raw values here:
-Vs30_raw = 279.06;          % unit: m/s
-xi_raw   = 0.10;         % damping ratio, e.g. 0.05 for 5%
-zetaPSA  = 0.0081;       % spectral shape factor = PSA(6s)/PGA
+Vs30_raw = 1437.37;          % unit: m/s
+xi_raw   = 0.20;         % damping ratio, e.g. 0.05 for 5%
+zetaPSA  = 0.0002;       % spectral shape factor = PSA(6s)/PGA
 
 % ---------------------------------
 % Step 2: Normalize input parameters
@@ -33,7 +33,7 @@ XTest = [Vs30_norm; xi_norm; zetaPSA_norm];
 
 % Step 3: Run prediction
 % ---------------------------------
-load('LSTM-K2.mat', 'net');
+load('LSTM-K1.mat', 'net');
 result = predict(net, XTest);
 
 % ---------------------------------
